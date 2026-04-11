@@ -3,6 +3,8 @@ name: CD
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   deploy:
@@ -10,5 +12,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
-    - run: echo "Deploy realizado com sucesso 🚀"
+    - run: echo "Deploy realizado com sucesso"
