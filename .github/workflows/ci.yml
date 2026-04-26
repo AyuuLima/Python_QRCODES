@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-    - run: pip install -r requirements.txt
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
 
-    - run: python gerar_qrcodes.py
+      - name: Rodar testes
+        run: |
+          pytest

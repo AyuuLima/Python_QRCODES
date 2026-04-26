@@ -2,3 +2,5 @@ pandas
 qrcode
 pillow
 openpyxl
+pytest
+flask
